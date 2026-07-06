@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "period": "22-26 Junho",
+    "sourceNote": "Dados de prototipo inspirados nos relatorios semanais fornecidos. Os PDFs nao ficaram acessiveis pelo sandbox do sistema, por isso os valores representam o conceito visual e operacional."
+  },
+  "filters": {
+    "clients": ["Todos", "Vodafone", "Oney"],
+    "types": ["Todos", "Inbound", "Outbound"],
+    "campaigns": ["INB Vodafone", "OUT Oney"],
+    "periods": ["22-26 Junho"]
+  },
+  "campaigns": [
+    {
+      "id": "inb-vodafone",
+      "name": "INB Vodafone",
+      "client": "Vodafone",
+      "type": "Inbound",
+      "period": "22-26 Junho",
+      "kpis": {
+        "received": 4860,
+        "answered": 4382,
+        "abandoned": 478,
+        "attempts": 0,
+        "contacts": 4382,
+        "validContacts": 4038,
+        "answerRate": 90.2,
+        "contactRate": 90.2,
+        "validContactRate": 83.1,
+        "productivity": 76.4,
+        "busy": 64.8,
+        "wrap": 11.6,
+        "busyWrap": 76.4,
+        "nonProductive": 23.6
+      },
+      "daily": [
+        {"day": "22 Jun", "received": 910, "answered": 815, "abandoned": 95, "attempts": 0, "contacts": 815, "validContacts": 746, "answerRate": 89.6, "contactRate": 89.6, "validContactRate": 82.0, "productivity": 74.5},
+        {"day": "23 Jun", "received": 1020, "answered": 928, "abandoned": 92, "attempts": 0, "contacts": 928, "validContacts": 858, "answerRate": 91.0, "contactRate": 91.0, "validContactRate": 84.1, "productivity": 77.8},
+        {"day": "24 Jun", "received": 980, "answered": 886, "abandoned": 94, "attempts": 0, "contacts": 886, "validContacts": 817, "answerRate": 90.4, "contactRate": 90.4, "validContactRate": 83.4, "productivity": 76.1},
+        {"day": "25 Jun", "received": 1125, "answered": 1026, "abandoned": 99, "attempts": 0, "contacts": 1026, "validContacts": 953, "answerRate": 91.2, "contactRate": 91.2, "validContactRate": 84.7, "productivity": 78.4},
+        {"day": "26 Jun", "received": 825, "answered": 727, "abandoned": 98, "attempts": 0, "contacts": 727, "validContacts": 664, "answerRate": 88.1, "contactRate": 88.1, "validContactRate": 80.5, "productivity": 74.9}
+      ],
+      "hourly": [
+        {"hour": "09:00", "value": 67, "answerRate": 86, "abandonRate": 14},
+        {"hour": "10:00", "value": 82, "answerRate": 91, "abandonRate": 9},
+        {"hour": "11:00", "value": 88, "answerRate": 92, "abandonRate": 8},
+        {"hour": "12:00", "value": 74, "answerRate": 89, "abandonRate": 11},
+        {"hour": "14:00", "value": 91, "answerRate": 93, "abandonRate": 7},
+        {"hour": "15:00", "value": 86, "answerRate": 91, "abandonRate": 9},
+        {"hour": "16:00", "value": 79, "answerRate": 90, "abandonRate": 10},
+        {"hour": "17:00", "value": 63, "answerRate": 85, "abandonRate": 15}
+      ]
+    },
+    {
+      "id": "out-oney",
+      "name": "OUT Oney",
+      "client": "Oney",
+      "type": "Outbound",
+      "period": "22-26 Junho",
+      "kpis": {
+        "received": 0,
+        "answered": 0,
+        "abandoned": 0,
+        "attempts": 7380,
+        "contacts": 2894,
+        "validContacts": 1846,
+        "answerRate": 0,
+        "contactRate": 39.2,
+        "validContactRate": 25.0,
+        "productivity": 71.8,
+        "busy": 58.7,
+        "wrap": 13.1,
+        "busyWrap": 71.8,
+        "nonProductive": 28.2
+      },
+      "daily": [
+        {"day": "22 Jun", "received": 0, "answered": 0, "abandoned": 0, "attempts": 1320, "contacts": 502, "validContacts": 318, "answerRate": 0, "contactRate": 38.0, "validContactRate": 24.1, "productivity": 69.3},
+        {"day": "23 Jun", "received": 0, "answered": 0, "abandoned": 0, "attempts": 1485, "contacts": 604, "validContacts": 397, "answerRate": 0, "contactRate": 40.7, "validContactRate": 26.7, "productivity": 72.6},
+        {"day": "24 Jun", "received": 0, "answered": 0, "abandoned": 0, "attempts": 1510, "contacts": 566, "validContacts": 358, "answerRate": 0, "contactRate": 37.5, "validContactRate": 23.7, "productivity": 70.8},
+        {"day": "25 Jun", "received": 0, "answered": 0, "abandoned": 0, "attempts": 1665, "contacts": 682, "validContacts": 442, "answerRate": 0, "contactRate": 41.0, "validContactRate": 26.5, "productivity": 74.0},
+        {"day": "26 Jun", "received": 0, "answered": 0, "abandoned": 0, "attempts": 1400, "contacts": 540, "validContacts": 331, "answerRate": 0, "contactRate": 38.6, "validContactRate": 23.6, "productivity": 72.1}
+      ],
+      "hourly": [
+        {"hour": "09:00", "value": 28, "answerRate": 0, "abandonRate": 0},
+        {"hour": "10:00", "value": 36, "answerRate": 0, "abandonRate": 0},
+        {"hour": "11:00", "value": 43, "answerRate": 0, "abandonRate": 0},
+        {"hour": "12:00", "value": 31, "answerRate": 0, "abandonRate": 0},
+        {"hour": "14:00", "value": 45, "answerRate": 0, "abandonRate": 0},
+        {"hour": "15:00", "value": 42, "answerRate": 0, "abandonRate": 0},
+        {"hour": "16:00", "value": 38, "answerRate": 0, "abandonRate": 0},
+        {"hour": "17:00", "value": 30, "answerRate": 0, "abandonRate": 0}
+      ]
+    }
+  ],
+  "operations": {
+    "summary": {
+      "productivity": 74.1,
+      "busy": 61.6,
+      "wrap": 12.3,
+      "busyWrap": 73.9,
+      "productiveTime": 534,
+      "nonProductiveTime": 188
+    },
+    "agents": [
+      {"agent": "Ana Martins", "campaign": "INB Vodafone", "productivity": 82.4, "busy": 69.2, "wrap": 13.2, "busyWrap": 82.4, "productiveTime": 398, "nonProductiveTime": 85, "contacts": 438, "validContacts": 407},
+      {"agent": "Bruno Silva", "campaign": "OUT Oney", "productivity": 79.8, "busy": 65.0, "wrap": 14.8, "busyWrap": 79.8, "productiveTime": 372, "nonProductiveTime": 94, "contacts": 356, "validContacts": 232},
+      {"agent": "Carla Reis", "campaign": "INB Vodafone", "productivity": 78.6, "busy": 67.1, "wrap": 11.5, "busyWrap": 78.6, "productiveTime": 381, "nonProductiveTime": 104, "contacts": 421, "validContacts": 391},
+      {"agent": "Diogo Costa", "campaign": "OUT Oney", "productivity": 76.9, "busy": 61.8, "wrap": 15.1, "busyWrap": 76.9, "productiveTime": 355, "nonProductiveTime": 107, "contacts": 330, "validContacts": 214},
+      {"agent": "Eva Pereira", "campaign": "INB Vodafone", "productivity": 75.2, "busy": 63.3, "wrap": 11.9, "busyWrap": 75.2, "productiveTime": 348, "nonProductiveTime": 115, "contacts": 386, "validContacts": 356},
+      {"agent": "Fabio Lopes", "campaign": "OUT Oney", "productivity": 73.8, "busy": 59.6, "wrap": 14.2, "busyWrap": 73.8, "productiveTime": 341, "nonProductiveTime": 121, "contacts": 318, "validContacts": 198},
+      {"agent": "Ines Sousa", "campaign": "INB Vodafone", "productivity": 72.7, "busy": 61.4, "wrap": 11.3, "busyWrap": 72.7, "productiveTime": 334, "nonProductiveTime": 126, "contacts": 360, "validContacts": 330},
+      {"agent": "Joao Lima", "campaign": "OUT Oney", "productivity": 70.5, "busy": 57.5, "wrap": 13.0, "busyWrap": 70.5, "productiveTime": 319, "nonProductiveTime": 133, "contacts": 294, "validContacts": 181},
+      {"agent": "Marta Gomes", "campaign": "INB Vodafone", "productivity": 69.8, "busy": 58.8, "wrap": 11.0, "busyWrap": 69.8, "productiveTime": 312, "nonProductiveTime": 135, "contacts": 342, "validContacts": 316},
+      {"agent": "Nuno Ribeiro", "campaign": "OUT Oney", "productivity": 67.9, "busy": 54.6, "wrap": 13.3, "busyWrap": 67.9, "productiveTime": 301, "nonProductiveTime": 142, "contacts": 276, "validContacts": 164}
+    ]
+  }
+}

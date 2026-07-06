@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Center Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://unpkg.com/tabulator-tables@6.2.5/dist/css/tabulator_simple.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+          </div>
+          <div class="brand-copy">
+            <strong>Contact Center</strong>
+            <small>Analytics</small>
+          </div>
+          <button class="collapse-button" id="collapseSidebar" aria-label="Recolher sidebar">
+            <span class="material-icons-round">keyboard_double_arrow_left</span>
+          </button>
+        </div>
+
+        <nav class="nav-menu" aria-label="Principal">
+          <button class="nav-item active" data-page="landing">
+            <span class="material-icons-round">corporate_fare</span>
+            <span>Landing</span>
+          </button>
+          <button class="nav-item" data-page="executive">
+            <span class="material-icons-round">space_dashboard</span>
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-item" data-page="campaign">
+            <span class="material-icons-round">campaign</span>
+            <span>Campaigns</span>
+          </button>
+          <button class="nav-item" data-page="operations">
+            <span class="material-icons-round">support_agent</span>
+            <span>Operations</span>
+          </button>
+          <button class="nav-item ghost" data-page="history">
+            <span class="material-icons-round">history</span>
+            <span>History</span>
+          </button>
+          <button class="nav-item ghost" data-page="settings">
+            <span class="material-icons-round">settings</span>
+            <span>Settings</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="mini-panel">
+            <span class="material-icons-round">insights</span>
+            <div>
+              <strong>Prototype v0.2</strong>
+              <small>UX/UI validation</small>
+            </div>
+          </div>
+          <label class="mode-switch">
+            <span class="material-icons-round">dark_mode</span>
+            <span>Dark Mode</span>
+            <input id="sidebarDarkMode" type="checkbox" aria-label="Alternar dark mode">
+          </label>
+        </div>
+      </aside>
+
+      <div class="main-area">
+        <header class="topbar">
+          <button class="icon-button mobile-menu" id="mobileMenu" aria-label="Abrir menu">
+            <span class="material-icons-round">menu</span>
+          </button>
+
+          <div class="page-heading">
+            <div class="breadcrumb" id="breadcrumb">Analytics / Landing Dashboard</div>
+            <h1 id="pageTitle">Landing Dashboard</h1>
+            <div class="header-meta">
+              <span><span class="material-icons-round">calendar_today</span>06 Jul 2026</span>
+              <span><span class="material-icons-round">schedule</span>09:35</span>
+              <span class="sync-chip"><span class="material-icons-round">sync</span>Protótipo sincronizado</span>
+            </div>
+          </div>
+
+          <section class="filter-bar" aria-label="Filtros">
+            <label>
+              <span>Cliente</span>
+              <select id="clientFilter"></select>
+            </label>
+            <label>
+              <span>Tipo</span>
+              <select id="typeFilter"></select>
+            </label>
+            <label>
+              <span>Campanha</span>
+              <select id="campaignFilter"></select>
+            </label>
+            <label>
+              <span>Período</span>
+              <select id="periodFilter"></select>
+            </label>
+          </section>
+
+          <div class="header-actions">
+            <button class="icon-button" id="themeToggle" aria-label="Alternar dark mode">
+              <span class="material-icons-round">dark_mode</span>
+            </button>
+            <div class="profile">
+              <span>GV</span>
+              <div>
+                <strong>Direção</strong>
+                <small>Operations</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="content">
+          <section class="view active" id="landingView" data-view="landing">
+            <div class="landing-hero">
+              <div>
+                <p>Contact Center Analytics</p>
+                <h2>Operação</h2>
+                <span>Última sincronização: Excel atualizado</span>
+              </div>
+              <div class="landing-status">
+                <span class="material-icons-round">verified</span>
+                <strong>Ideia viável</strong>
+                <small>v0.2 UX/UI</small>
+              </div>
+            </div>
+
+            <div class="client-grid" id="clientLandingCards"></div>
+
+            <div class="dashboard-grid landing-grid">
+              <article class="panel span-7">
+                <div class="panel-header">
+                  <div>
+                    <p>Portfolio overview</p>
+                    <h3>Estado operacional por cliente</h3>
+                  </div>
+                </div>
+                <div class="portfolio-bars">
+                  <div><span>Vodafone</span><strong>92%</strong><i style="width: 92%"></i></div>
+                  <div><span>Oney</span><strong>78%</strong><i style="width: 78%"></i></div>
+                  <div><span>GNB</span><strong>88%</strong><i style="width: 88%"></i></div>
+                  <div><span>NOS</span><strong>61%</strong><i style="width: 61%"></i></div>
+                </div>
+              </article>
+              <article class="panel span-5">
+                <div class="panel-header">
+                  <div>
+                    <p>Direção</p>
+                    <h3>Leitura executiva</h3>
+                  </div>
+                </div>
+                <div class="executive-note">
+                  <span class="material-icons-round">auto_awesome</span>
+                  <strong>Produto pronto para validação visual</strong>
+                  <p>O próximo passo recomendado é fechar identidade, navegação e organização dos KPIs antes de integrar dados reais.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" id="executiveView" data-view="executive">
+            <div class="section-title">
+              <div>
+                <p>Executive overview</p>
+                <h2>Visão integrada da operação</h2>
+              </div>
+              <span class="status-pill positive">
+                <span class="material-icons-round">trending_up</span>
+                Live prototype
+              </span>
+            </div>
+
+            <div class="kpi-grid" id="executiveKpis"></div>
+
+            <div class="dashboard-grid executive-grid">
+              <article class="panel span-8">
+                <div class="panel-header">
+                  <div>
+                    <p>Performance diária</p>
+                    <h3>Recebidas, atendidas e contactos</h3>
+                  </div>
+                </div>
+                <div id="dailyPerformanceChart" class="chart"></div>
+              </article>
+              <article class="panel span-4">
+                <div class="panel-header">
+                  <div>
+                    <p>Distribuição</p>
+                    <h3>Campanhas</h3>
+                  </div>
+                </div>
+                <div id="campaignDistributionChart" class="chart"></div>
+              </article>
+              <article class="panel span-5">
+                <div class="panel-header">
+                  <div>
+                    <p>Inbound vs Outbound</p>
+                    <h3>Volume comparado</h3>
+                  </div>
+                </div>
+                <div id="inboundOutboundChart" class="chart"></div>
+              </article>
+              <article class="panel span-7">
+                <div class="panel-header">
+                  <div>
+                    <p>Performance por hora</p>
+                    <h3>Mapa de calor operacional</h3>
+                  </div>
+                </div>
+                <div id="hourlyHeatmapChart" class="chart"></div>
+              </article>
+              <article class="panel span-7">
+                <div class="panel-header">
+                  <div>
+                    <p>Tendência</p>
+                    <h3>Eficiência acumulada</h3>
+                  </div>
+                </div>
+                <div id="trendAreaChart" class="chart"></div>
+              </article>
+              <article class="panel insights-panel span-5">
+                <div class="panel-header">
+                  <div>
+                    <p>Smart insights</p>
+                    <h3>Sinais rápidos</h3>
+                  </div>
+                </div>
+                <div class="insights-grid" id="executiveInsights"></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" id="campaignView" data-view="campaign">
+            <div class="section-title">
+              <div>
+                <p>Campaign dashboard</p>
+                <h2 id="campaignHeadline">Campanha selecionada</h2>
+              </div>
+              <span class="status-pill neutral" id="campaignTypePill">Inbound</span>
+            </div>
+
+            <div class="kpi-grid campaign-kpis" id="campaignKpis"></div>
+
+            <div class="dashboard-grid">
+              <article class="panel span-8">
+                <div class="panel-header">
+                  <div>
+                    <p>Performance diária</p>
+                    <h3>Qualidade e volume</h3>
+                  </div>
+                </div>
+                <div id="campaignDailyChart" class="chart"></div>
+              </article>
+              <article class="panel span-4">
+                <div class="panel-header">
+                  <div>
+                    <p>Cobertura</p>
+                    <h3>Eficiência</h3>
+                  </div>
+                </div>
+                <div id="campaignEfficiencyChart" class="chart"></div>
+              </article>
+              <article class="panel span-5">
+                <div class="panel-header">
+                  <div>
+                    <p>Performance horária</p>
+                    <h3>Contact rate</h3>
+                  </div>
+                </div>
+                <div id="campaignHourlyChart" class="chart"></div>
+              </article>
+              <article class="panel span-7">
+                <div class="panel-header">
+                  <div>
+                    <p>Heatmap</p>
+                    <h3>Atendimento e abandono</h3>
+                  </div>
+                </div>
+                <div id="campaignHeatmapChart" class="chart"></div>
+              </article>
+              <article class="panel insights-panel span-12">
+                <div class="panel-header">
+                  <div>
+                    <p>Insights</p>
+                    <h3>Leitura rápida da campanha</h3>
+                  </div>
+                </div>
+                <div class="insights-grid wide" id="campaignInsights"></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" id="operationsView" data-view="operations">
+            <div class="section-title">
+              <div>
+                <p>Operations dashboard</p>
+                <h2>Produtividade e estados dos agentes</h2>
+              </div>
+              <span class="status-pill positive">
+                <span class="material-icons-round">groups</span>
+                18 agentes
+              </span>
+            </div>
+
+            <div class="kpi-grid ops-kpis" id="operationsKpis"></div>
+
+            <div class="dashboard-grid operations-grid">
+              <article class="panel span-7">
+                <div class="panel-header">
+                  <div>
+                    <p>Produtividade</p>
+                    <h3>Tempo produtivo vs não produtivo</h3>
+                  </div>
+                </div>
+                <div id="productiveTimeChart" class="chart"></div>
+              </article>
+              <article class="panel span-5">
+                <div class="panel-header">
+                  <div>
+                    <p>Estados</p>
+                    <h3>Busy, wrap e pausas</h3>
+                  </div>
+                </div>
+                <div id="statesChart" class="chart"></div>
+              </article>
+              <article class="panel span-6">
+                <div class="panel-header">
+                  <div>
+                    <p>Ranking agentes</p>
+                    <h3>Top performance</h3>
+                  </div>
+                </div>
+                <div id="agentRankingChart" class="chart"></div>
+              </article>
+              <article class="panel span-6">
+                <div class="panel-header">
+                  <div>
+                    <p>Busy vs Wrap</p>
+                    <h3>Comparação entre agentes</h3>
+                  </div>
+                </div>
+                <div id="busyWrapChart" class="chart"></div>
+              </article>
+              <article class="panel table-panel span-12">
+                <div class="panel-header">
+                  <div>
+                    <p>Tabela interativa</p>
+                    <h3>Detalhe operacional</h3>
+                  </div>
+                  <div class="table-tools">
+                    <span class="material-icons-round">search</span>
+                    <input id="agentSearch" type="search" placeholder="Pesquisar agente">
+                  </div>
+                </div>
+                <div id="agentsTable"></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="view placeholder-view" id="historyView" data-view="history">
+            <span class="material-icons-round">history</span>
+            <h2>History</h2>
+            <p>Área reservada para evolução futura do produto.</p>
+          </section>
+
+          <section class="view placeholder-view" id="settingsView" data-view="settings">
+            <span class="material-icons-round">settings</span>
+            <h2>Settings</h2>
+            <p>Configurações visuais e preferências da aplicação.</p>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://unpkg.com/tabulator-tables@6.2.5/dist/js/tabulator.min.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
